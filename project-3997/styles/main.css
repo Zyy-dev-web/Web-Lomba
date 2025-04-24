@@ -1,0 +1,94 @@
+/* Main CSS File */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 15px;
+  width: 2px;
+  background-color: #60A5FA;
+  height: calc(100% - 48px);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #1E40AF;
+  border: 6px solid #60A5FA;
+  z-index: 1;
+}
+
+.card-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+  border-color: #60A5FA;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.btn-primary {
+  background-color: #22C55E;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #16A34A;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #1E40AF;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #1E3A8A;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .timeline-connector {
+    left: 10px;
+  }
+  
+  .timeline-dot {
+    width: 24px;
+    height: 24px;
+    border-width: 4px;
+  }
+}
